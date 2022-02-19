@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.border{
+    border: 1px solid black;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+h1{
+    
+    text-align: center;
+        color: white;
+
+}
+.espacio{
+    transform: translateX(150px);
+}
+h2{
+    
+    text-align: center;
+        color:gold;
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'Lobster', cursive;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        font-family: 'Pacifico', cursive;
+}
+div img{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+    /*Desktop*/
+@media (min-width:1024px){
+    #cuerpo{
+        display: grid;
+        grid-template-areas: 
+        "header header header" 
+        "menu peliculas peliculas"
+        "menu estrenos estrenos" 
+        "menu footer footer"   
+        ;
+        grid-template-columns: 20% auto 10%;
+        grid-template-rows: 100px 2fr  2fr 1fr;
+    } 
+    .mas{
+        transform: translateX(60vh);
+    }
+    .espacio{
+        transform: translateX(120px);
+    }
+    
+    .oculto{
+        display: none;
+    }
+    .ec-stars-wrapper {
+    
+        font-size: 0;
+        display: inline-block;
+    }
+    .ec-stars-wrapper a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 32px;
+        font-size: 2rem;
+        
+        color: #888;
+    }
+    
+    .ec-stars-wrapper:hover a {
+        color: rgb(39, 130, 228);
+    }
+    .ec-stars-wrapper > a:hover ~ a {
+        color: #888;
+    }
+    
+    header{
+        
+        grid-area: header;
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    }
+    footer{
+        grid-area: footer;
+    }
+    section#peliculas{
+        grid-area: peliculas;
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+        
+    }
+    section#estrenos{
+        grid-area: estrenos;
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    }
+    
+    nav{
+        grid-area: menu;
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    }
+    footer{
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    footer img{
+    
+    width: 20px;
+    transform: translateY(-20px);
+    }
+    .acomodar{
+        transform: translateY(-20px);
+    }
+}
+    /*tablet*/
+@media(min-width:481px) and (max-width:1023px){
+
+    #cuerpo{
+        display: grid;
+        grid-template-areas: 
+        "header header " 
+        "peliculas peliculas " 
+        "estrenos estrenos"
+        "footer footer"   
+        ;
+        grid-template-columns: 15% auto;
+        grid-template-rows: 100px 2fr  2fr 2fr;
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+    } 
+    .mas{
+        transform: translateX(50vh);
+    }
+    .espacio{
+        transform: translateX(0px);
+    } 
+    .oculto{
+        transform: translateX(400px);
+    }
+    header{
+        
+        grid-area: header;
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    }
+    footer{
+        grid-area: footer;
+        
+    }
+    section#peliculas{
+        grid-area: peliculas;
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+        
+    }
+    section#estrenos{
+        grid-area: estrenos;
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    }
+    nav{
+        display: none;
+    }
+    
+    footer{
+        background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    footer img{
+    
+        width: 20px;
+        transform: translateY(-20px);
+        }
+        .acomodar{
+            transform: translateY(-20px);
+        }
+
+    .atras{
+        background-color: #f5d020;
+background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+    }
+    
+}
+
+
+    
+    
+    
+    /*smartphone*/
+    @media (max-width:480px){
+    
+        #cuerpo{
+            display: grid;
+            grid-template-areas: 
+            "header" 
+            "peliculas " 
+            "estrenos "
+            "footer"   
+            ;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 2fr  2fr 2fr ;
+            grid-column-gap: 2px;
+            grid-row-gap: 2px;
+        }  
+        .espacio{
+            transform: translateX(0px);
+        } 
+        .oculto{
+            transform: translateX(160px);
+        }
+    
+        header{
+        
+            grid-area: header;
+            background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+        }
+        footer{
+            grid-area: footer;
+        }
+        section#peliculas{
+            grid-area: peliculas;
+            background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+            
+        }
+        section#estrenos{
+            grid-area: estrenos;
+            background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+        }
+        
+        nav{
+            display: none;
+        }
+        footer{
+            background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        footer img{
+    
+            width: 20px;
+            transform: translateY(-20px);
+            }
+            .acomodar{
+                transform: translateY(-20px);
+            }
+        .atras{
+            background-color: #f5d020;
+    background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+        }
+        .mas{
+            transform: translateX(30vh);
+        }
+    
+    }
